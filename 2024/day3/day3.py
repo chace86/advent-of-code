@@ -8,10 +8,10 @@ active = True
 for tuple in tuples:
     if "do" in tuple:
         active = True
-    elif "don't" in tuple or not active:
+    elif "don't" in tuple:
         active = False
-    else:
-        total += (int(tuple[0]) * int(tuple[1]))
+    elif active:
+        total += int(tuple[0]) * int(tuple[1])
 
 
 print(total)
