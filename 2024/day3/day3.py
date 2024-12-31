@@ -13,5 +13,4 @@ for tuple in tuples:
     elif active:
         total += int(tuple[0]) * int(tuple[1])
 
-
 print(total)
