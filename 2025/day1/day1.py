@@ -13,9 +13,9 @@ for line in input.splitlines():
     new_position = current_position + (sign * remainder)
     # add 1 if the remainder causes current_position to pass zero
     # edge case, if current_position starts on zero, cannot pass zero
-    n = int(current_position != 0 and not (0 < new_position < 100))
+    remainder_rotation = int(current_position != 0 and not (0 < new_position < 100))
 
-    num_zeros += full_rotations + n
+    num_zeros += full_rotations + remainder_rotation
     current_position = new_position % 100
 
 print(f"The password is: {num_zeros}")
